@@ -67,15 +67,6 @@ public class MainActivity extends AppCompatActivity implements ITrueCallback, Vi
         name.setText(fullName);
         number.setText(trueProfile.phoneNumber);
         email.setText(trueProfile.email);
-        //  mProfileAddress.setText(trueProfile.city);
-        final List<String> jobComponents = new ArrayList<>(2);
-        if (!TextUtils.isEmpty(trueProfile.jobTitle)) {
-            jobComponents.add(trueProfile.jobTitle);
-        }
-        if (!TextUtils.isEmpty(trueProfile.companyName)) {
-            jobComponents.add(trueProfile.companyName);
-        }
-        //  mProfileJob.setText(TextUtils.join(" @ ", jobComponents));
 
         if (mTruecallerRequestNonce.equals(trueProfile.requestNonce)) {
             Toast.makeText(this, "The request nonce matches", Toast.LENGTH_SHORT).show();
